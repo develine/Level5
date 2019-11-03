@@ -1,18 +1,18 @@
 package com.example.reminder_3
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 
 class ReminderRepository(context: Context) {
 
     private var reminderDao: ReminderDao
 
     init {
-        // Couple Reminder database with the reminderDao
         val reminderRoomDatabase = ReminderRoomDatabase.getDatabase(context)
         reminderDao = reminderRoomDatabase!!.reminderDao()
     }
 
-    suspend fun getAllReminders(): List<Reminder> {
+    fun getAllReminders(): LiveData<List<Reminder>> {
         return reminderDao.getAllReminders()
     }
 

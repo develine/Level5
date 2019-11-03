@@ -1,5 +1,6 @@
 package com.example.reminder_3
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 // data access objects
@@ -8,7 +9,7 @@ import androidx.room.*
 interface ReminderDao {
 
     @Query("SELECT * FROM reminderTable")
-    suspend fun getAllReminders(): List<Reminder>
+    fun getAllReminders(): LiveData<List<Reminder>>
 
     @Insert
     suspend fun insertReminder(reminder: Reminder)

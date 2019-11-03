@@ -14,8 +14,7 @@ abstract class ReminderRoomDatabase : RoomDatabase() {
     companion object {
         private const val DATABASE_NAME = "REMINDER_DATABASE"
 
-        @Volatile // Singleton
-        // 1 database genereren
+        @Volatile
         private var reminderRoomDatabaseInstance: ReminderRoomDatabase? = null
 
         fun getDatabase(context: Context): ReminderRoomDatabase? {
