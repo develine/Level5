@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Reminder_3</string>
+    <string name="action_settings">Settings</string>
+    <string name="give_a_reminder">Give a reminder</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="textview">TextView</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="reminder">Reminder</string>
+</resources>
