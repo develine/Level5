@@ -37,7 +37,7 @@ abstract class NotepadRoomDatabase : RoomDatabase() {
                                     super.onCreate(db)
                                     INSTANCE?.let { database ->
                                         CoroutineScope(Dispatchers.IO).launch {
-                                            database.noteDao().insertNote(Note("Title", Date(), ""))
+                                            database.noteDao().insertNote(Note("My personal notepad", Date(), ""))
                                         }
                                     }
                                 }
